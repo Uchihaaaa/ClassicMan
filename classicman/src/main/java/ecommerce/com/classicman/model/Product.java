@@ -1,6 +1,7 @@
 package ecommerce.com.classicman.model;
 
 import javax.persistence.*;
+import java.io.File;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -25,7 +26,7 @@ public class Product implements Serializable {
     private Integer categoryId;
 
     @Column(name = "images")
-    private Integer images;
+    private File images;
 
     @Column(name = "delete_flag")
     private Integer deleteFlag;
@@ -76,11 +77,11 @@ public class Product implements Serializable {
         this.categoryId = categoryId;
     }
 
-    public Integer getImages() {
+    public File getImages() {
         return images;
     }
 
-    public void setImages(Integer images) {
+    public void setImages(File images) {
         this.images = images;
     }
 

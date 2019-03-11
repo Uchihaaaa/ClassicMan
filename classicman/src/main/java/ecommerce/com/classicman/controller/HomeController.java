@@ -25,7 +25,7 @@ public class HomeController {
     public ModelAndView home(){
         ModelAndView mv = new ModelAndView();
         List<Product> productList = productService.findAllProduct();
-        mv.addObject("productList",productList);
+        mv.addObject("productList",productList.subList(0,9));
         mv.setViewName("index");
         return mv;
     }
@@ -83,13 +83,6 @@ public class HomeController {
     public ModelAndView admin(){
         ModelAndView mv = new ModelAndView();
         mv.setViewName("admin/index");
-        return mv;
-    }
-
-    @GetMapping("/admin/product")
-    public ModelAndView product(){
-        ModelAndView mv = new ModelAndView();
-        mv.setViewName("admin/product");
         return mv;
     }
 }

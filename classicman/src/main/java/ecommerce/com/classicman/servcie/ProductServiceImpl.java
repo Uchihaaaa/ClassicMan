@@ -5,6 +5,7 @@ import ecommerce.com.classicman.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -16,5 +17,13 @@ public class ProductServiceImpl implements ProductService{
     @Override
     public List<Product> findAllProduct() {
         return productRepository.findAll();
+    }
+
+    @Override
+    public void createNewProduct(Product productForm) {
+        productForm.setDeleteFlag(0);
+        productForm.setCreatedAt(new Date());
+        productForm.setUpdatedAt(new Date());
+        productRepository.save(productForm);
     }
 }

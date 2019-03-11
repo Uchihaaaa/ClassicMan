@@ -6,4 +6,6 @@ import java.util.List;
 
 public interface ProductService {
     List<Product> findAllProduct();
+
+    void createNewProduct(Product productForm);
 }

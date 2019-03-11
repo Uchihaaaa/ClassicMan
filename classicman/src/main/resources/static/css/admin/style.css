@@ -4618,7 +4618,7 @@ canvas#pie {
     font-size: 0.8em;
     padding: 0.6em 1em;
 }
-.pro-head h2 {
+.pro-head h2{
     font-size: 1.7em;
     margin: 0em 0em 0.5em 0em;
 }
@@ -4716,4 +4716,15 @@ ul.dropdown-menu {
 .b_tooltip {
     padding: 4px 7px 7px 7px;
 }
+}
+.add-item{
+    margin: 0em 0em 1em 0.4em;
+}
+
+#nivo-lightbox-demo .fa-pencil-square-o{
+    background-color: #b13232;
+    color: #fff;
+    padding: 10px;
+    float: right;
+    border-bottom-left-radius: 22px;
 }

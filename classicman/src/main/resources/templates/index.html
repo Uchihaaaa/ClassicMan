@@ -1,13 +1,5 @@
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
-
 <!DOCTYPE html>
-<html lang="zxx">
-
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Bootie Ecommerce Bootstrap Responsive Web Template | Home :: W3layouts</title>
     <!-- Meta tag Keywords -->
@@ -141,33 +133,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <div class="container pb-lg-3">
             <h3 class="tittle text-center">New Arrivals</h3>
             <div class="row">
-                <div class="col-md-4 product-men">
-                    <div class="product-shoe-info shoe text-center">
-                        <div class="men-thumb-item">
-                            <img src="images/s1.jpg" class="img-fluid" alt="">
-                            <span class="product-new-top">New</span>
-                        </div>
-                        <div class="item-info-product">
-                            <h4>
-                                <a href="shop-single">Bella Toes </a>
-                            </h4>
-
-                            <div class="product_price">
-                                <div class="grid-price">
-                                    <span class="money">$675.00</span>
-                                </div>
-                            </div>
-                            <ul class="stars">
-                                <li><a href="#"><span class="fa fa-star" aria-hidden="true"></span></a></li>
-                                <li><a href="#"><span class="fa fa-star" aria-hidden="true"></span></a></li>
-                                <li><a href="#"><span class="fa fa-star-half-o" aria-hidden="true"></span></a></li>
-                                <li><a href="#"><span class="fa fa-star-half-o" aria-hidden="true"></span></a></li>
-                                <li><a href="#"><span class="fa fa-star-o" aria-hidden="true"></span></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 product-men">
+                <div class="col-md-4 product-men my-lg-4" th:each="product : ${productList}">
                     <div class="product-shoe-info shoe text-center">
                         <div class="men-thumb-item">
                             <img src="images/s2.jpg" class="img-fluid" alt="">
@@ -175,194 +141,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         </div>
                         <div class="item-info-product">
                             <h4>
-                                <a href="shop-single">Chikku Loafers </a>
+                                <a href="shop-single" th:text="${product.productName} ?: 'Chikku Loafers'"></a>
                             </h4>
 
                             <div class="product_price">
                                 <div class="grid-price">
-                                    <span class="money">$475.00</span>
-                                </div>
-                            </div>
-                            <ul class="stars">
-                                <li><a href="#"><span class="fa fa-star" aria-hidden="true"></span></a></li>
-                                <li><a href="#"><span class="fa fa-star" aria-hidden="true"></span></a></li>
-                                <li><a href="#"><span class="fa fa-star" aria-hidden="true"></span></a></li>
-                                <li><a href="#"><span class="fa fa-star-half-o" aria-hidden="true"></span></a></li>
-                                <li><a href="#"><span class="fa fa-star-o" aria-hidden="true"></span></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 product-men">
-                    <div class="product-shoe-info shoe text-center">
-                        <div class="men-thumb-item">
-                            <img src="images/s3.jpg" class="img-fluid" alt="">
-                            <span class="product-new-top">New</span>
-                        </div>
-                        <div class="item-info-product">
-                            <h4>
-                                <a href="shop-single">(SRV) Sneakers </a>
-                            </h4>
-
-                            <div class="product_price">
-                                <div class="grid-price">
-                                    <span class="money">$575.00</span>
-                                </div>
-                            </div>
-                            <ul class="stars">
-                                <li><a href="#"><span class="fa fa-star" aria-hidden="true"></span></a></li>
-                                <li><a href="#"><span class="fa fa-star" aria-hidden="true"></span></a></li>
-                                <li><a href="#"><span class="fa fa-star" aria-hidden="true"></span></a></li>
-                                <li><a href="#"><span class="fa fa-star-half-o" aria-hidden="true"></span></a></li>
-                                <li><a href="#"><span class="fa fa-star-o" aria-hidden="true"></span></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 product-men my-lg-4">
-                    <div class="product-shoe-info shoe text-center">
-                        <div class="men-thumb-item">
-                            <img src="images/s4.jpg" class="img-fluid" alt="">
-                            <span class="product-new-top">New</span>
-                        </div>
-                        <div class="item-info-product">
-                            <h4>
-                                <a href="shop-single">Shuberry Heels</a>
-                            </h4>
-
-                            <div class="product_price">
-                                <div class="grid-price">
-                                    <span class="money">$575.00</span>
-                                </div>
-                            </div>
-                            <ul class="stars">
-                                <li><a href="#"><span class="fa fa-star" aria-hidden="true"></span></a></li>
-                                <li><a href="#"><span class="fa fa-star" aria-hidden="true"></span></a></li>
-                                <li><a href="#"><span class="fa fa-star" aria-hidden="true"></span></a></li>
-                                <li><a href="#"><span class="fa fa-star-half-o" aria-hidden="true"></span></a></li>
-                                <li><a href="#"><span class="fa fa-star-o" aria-hidden="true"></span></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 product-men my-lg-4">
-                    <div class="product-shoe-info shoe text-center">
-                        <div class="men-thumb-item">
-                            <img src="images/s5.jpg" class="img-fluid" alt="">
-                            <span class="product-new-top">New</span>
-                        </div>
-                        <div class="item-info-product">
-                            <h4>
-                                <a href="shop-single">Red Bellies </a>
-                            </h4>
-
-                            <div class="product_price">
-                                <div class="grid-price">
-                                    <span class="money">$575.00</span>
-                                </div>
-                            </div>
-                            <ul class="stars">
-                                <li><a href="#"><span class="fa fa-star" aria-hidden="true"></span></a></li>
-                                <li><a href="#"><span class="fa fa-star" aria-hidden="true"></span></a></li>
-                                <li><a href="#"><span class="fa fa-star" aria-hidden="true"></span></a></li>
-                                <li><a href="#"><span class="fa fa-star-half-o" aria-hidden="true"></span></a></li>
-                                <li><a href="#"><span class="fa fa-star-o" aria-hidden="true"></span></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 product-men my-lg-4">
-                    <div class="product-shoe-info shoe text-center">
-                        <div class="men-thumb-item">
-                            <img src="images/s6.jpg" class="img-fluid" alt="">
-                            <span class="product-new-top">New</span>
-                        </div>
-                        <div class="item-info-product">
-                            <h4>
-                                <a href="shop-single">Catwalk Flats </a>
-                            </h4>
-
-                            <div class="product_price">
-                                <div class="grid-price">
-                                    <span class="money">$575.00</span>
-                                </div>
-                            </div>
-                            <ul class="stars">
-                                <li><a href="#"><span class="fa fa-star" aria-hidden="true"></span></a></li>
-                                <li><a href="#"><span class="fa fa-star" aria-hidden="true"></span></a></li>
-                                <li><a href="#"><span class="fa fa-star" aria-hidden="true"></span></a></li>
-                                <li><a href="#"><span class="fa fa-star-half-o" aria-hidden="true"></span></a></li>
-                                <li><a href="#"><span class="fa fa-star-o" aria-hidden="true"></span></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 product-men">
-                    <div class="product-shoe-info shoe text-center">
-                        <div class="men-thumb-item">
-                            <img src="images/s7.jpg" class="img-fluid" alt="">
-                            <span class="product-new-top">New</span>
-                        </div>
-                        <div class="item-info-product">
-                            <h4>
-                                <a href="shop-single">Running Shoes </a>
-                            </h4>
-
-                            <div class="product_price">
-                                <div class="grid-price">
-                                    <span class="money">$675.00</span>
-                                </div>
-                            </div>
-                            <ul class="stars">
-                                <li><a href="#"><span class="fa fa-star" aria-hidden="true"></span></a></li>
-                                <li><a href="#"><span class="fa fa-star" aria-hidden="true"></span></a></li>
-                                <li><a href="#"><span class="fa fa-star-half-o" aria-hidden="true"></span></a></li>
-                                <li><a href="#"><span class="fa fa-star-half-o" aria-hidden="true"></span></a></li>
-                                <li><a href="#"><span class="fa fa-star-o" aria-hidden="true"></span></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 product-men">
-                    <div class="product-shoe-info shoe text-center">
-                        <div class="men-thumb-item">
-                            <img src="images/s8.jpg" class="img-fluid" alt="">
-                            <span class="product-new-top">New</span>
-                        </div>
-                        <div class="item-info-product">
-                            <h4>
-                                <a href="shop-single">Sukun Casuals </a>
-                            </h4>
-
-                            <div class="product_price">
-                                <div class="grid-price ">
-                                    <span class="money ">$775.00</span>
-                                </div>
-                            </div>
-                            <ul class="stars">
-                                <li><a href="#"><span class="fa fa-star" aria-hidden="true"></span></a></li>
-                                <li><a href="#"><span class="fa fa-star" aria-hidden="true"></span></a></li>
-                                <li><a href="#"><span class="fa fa-star" aria-hidden="true"></span></a></li>
-                                <li><a href="#"><span class="fa fa-star-half-o" aria-hidden="true"></span></a></li>
-                                <li><a href="#"><span class="fa fa-star-o" aria-hidden="true"></span></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 product-men">
-                    <div class="product-shoe-info shoe text-center">
-                        <div class="men-thumb-item">
-                            <img src="images/s9.jpg" class="img-fluid" alt="">
-                            <span class="product-new-top">New</span>
-                        </div>
-                        <div class="item-info-product">
-                            <h4>
-                                <a href="shop-single">Bank Sneakers</a>
-                            </h4>
-
-                            <div class="product_price">
-                                <div class="grid-price">
-                                    <span class="money">$875.00</span>
+                                    <span class="money" th:text="${product.price != null} ? ${'$' + product.price} : '$0'"></span>
                                 </div>
                             </div>
                             <ul class="stars">
